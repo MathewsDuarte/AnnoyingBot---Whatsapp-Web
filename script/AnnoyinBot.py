@@ -12,21 +12,15 @@ while True:
     userName = input("What's the group or username? : \n")
     messageText = input("\n Type your message for annoy someone : \n")
     count = int(input("Enter the number of times you will repeat the message : \n"))
-    ###hashUrgente = ("")
 
     print ("Scan with your phone the QR Code.")
     print ("Type any shit to proceed.")
     print ("Loading...")
 
-
-
     user = driver.find_element_by_xpath('//span[@title ="{}"]'.format(userName))
     user.click()
 
-
     msg_box = driver.find_element_by_class_name('_1Plpp')
-
-
 
     for i in range(count):
         msg_box.send_keys(messageText)
